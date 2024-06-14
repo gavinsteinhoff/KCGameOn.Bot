@@ -1,4 +1,4 @@
-﻿namespace KCGameOn.Bot.Models;
+﻿namespace KCGameOn.Data.Models;
 
 /// <summary>
 /// For all future events titles, descriptions and more

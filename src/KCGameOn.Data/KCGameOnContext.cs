@@ -1,7 +1,7 @@
-﻿using KCGameOn.Bot.Models;
+﻿using KCGameOn.Data.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace KCGameOn.Bot.Data;
+namespace KCGameOn.Data;
 
 public partial class KCGameOnContext : DbContext
 {

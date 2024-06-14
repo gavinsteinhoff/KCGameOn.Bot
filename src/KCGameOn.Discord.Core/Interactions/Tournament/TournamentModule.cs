@@ -1,9 +1,9 @@
 ﻿using Discord;
 using Discord.Interactions;
-using KCGameOn.Bot.Data;
+using KCGameOn.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace KCGameOn.Bot.Interactions.Tournament;
+namespace KCGameOn.Discord.Core.Interactions.Tournament;
 
 [Group("tournament", "Tournament Commands")]
 public class TournamentModule : InteractionModuleBase
@@ -13,12 +13,6 @@ public class TournamentModule : InteractionModuleBase
     public TournamentModule(KCGameOnContext context)
     {
         _context = context;
-    }
-
-    [SlashCommand("ping", "Ping Pong")]
-    public async Task Ping([Summary(description: "Message to Pong")] string message = "")
-    {
-        await RespondAsync($"Pong {message}", ephemeral: true);
     }
 
     [SlashCommand("schedule", "Shows the schedule for the week.")]

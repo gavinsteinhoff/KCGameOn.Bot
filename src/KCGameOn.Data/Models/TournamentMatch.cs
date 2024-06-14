@@ -1,4 +1,4 @@
-﻿namespace KCGameOn.Bot.Models;
+﻿namespace KCGameOn.Data.Models;
 
 public partial class TournamentMatch
 {
