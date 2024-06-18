@@ -24,19 +24,25 @@ public class TournamentModule : InteractionModuleBase
             .SingleOrDefaultAsync(x => x.IdEventsTable == 1009 && x.TournamentId == tournamentId);
 
         if (tournament is null)
+        {
+            await RespondAsync("Invalid Tournament", ephemeral: true);
             return;
+        }
 
         var matches = await _context
-            .TournamentMatches
-            .AsNoTracking()
-            .Where(x =>
-                x.TournamentId == tournament.TournamentId &&
-                x.Round == round
-            )
-            .ToListAsync();
+        .TournamentMatches
+        .AsNoTracking()
+        .Where(x =>
+            x.TournamentId == tournament.TournamentId &&
+            x.Round == round
+        )
+        .ToListAsync();
 
         if (matches is null || !matches.Any())
+        {
+            await RespondAsync("Tournament has no matches.", ephemeral: true);
             return;
+        }
 
         var embeds = new List<Embed>();
         foreach (var item in matches)

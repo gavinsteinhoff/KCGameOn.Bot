@@ -11,8 +11,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Timbn.Discord" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\KCGameOn.Data\KCGameOn.Data.csproj" />
-    <ProjectReference Include="..\Timbn.Discord\Timbn.Discord.csproj" />
   </ItemGroup>
 
 </Project>

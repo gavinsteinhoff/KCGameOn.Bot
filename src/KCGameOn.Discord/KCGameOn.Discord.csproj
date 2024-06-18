@@ -9,7 +9,6 @@
   <ItemGroup>
     <ProjectReference Include="..\KCGameOn.Data\KCGameOn.Data.csproj" />
     <ProjectReference Include="..\KCGameOn.Discord.Core\KCGameOn.Discord.Core.csproj" />
-    <ProjectReference Include="..\Timbn.Discord\Timbn.Discord.csproj" />
   </ItemGroup>
 
 </Project>
